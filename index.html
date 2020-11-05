@@ -1,47 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Catlow Online Gallery</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="herofade.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Gallery</title>
+    <link rel="stylesheet" href="gallery3.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- hero section -->
+
     <header class="hero">
-        <h1 class="hero--title"><span id="david">David</span><br><span id="catlow">Catlow</span></h1>
-        
+      <h1 class="hero--title">
+        <span id="david">David</span><br /><span id="catlow">Catlow</span>
+      </h1>
     </header>
 
-<section class="bio">
-    
+    <!-- Bio section -->
+
+    <section class="bio">
+      <div>
         <h2 id="bio--title">All about me</h2>
-        <p id="bio--blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti officiis totam consectetur sed minus voluptatum esse delectus rem culpa voluptas molestiae aspernatur odit praesentium explicabo similique at error, reprehenderit repudiandae commodi incidunt illo nobis! Officiis, et dolor! Cupiditate, repellendus aliquam veniam, asperiores a perspiciatis tenetur maiores reiciendis dolorum, numquam accusantium voluptas minus velit itaque sit tempora quibusdam esse voluptates tempore labore laudantium? Architecto quasi vel repellendus tenetur nobis veritatis a ex id alias corrupti magni harum obcaecati dignissimos dolorum eum asperiores maxime adipisci reprehenderit voluptatum ipsa, earum deleniti suscipit dolores. Autem explicabo commodi, ducimus ab animi nesciunt temporibus saepe velit!</p>
-</section>
+        <img src="./images/david_profile_small.jpg" id="bio--pic" />
+      </div>
+      <p id="bio--blurb">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+        officiis totam consectetur sed minus voluptatum esse delectus rem culpa
+        voluptas molestiae aspernatur odit praesentium explicabo similique at
+        error, reprehenderit repudiandae commodi incidunt illo nobis! Officiis,
+        et dolor! Cupiditate, repellendus aliquam veniam, asperiores a
+        perspiciatis tenetur maiores reiciendis dolorum, numquam accusantium
+        voluptas minus velit itaque sit tempora quibusdam esse voluptates
+        tempore labore laudantium? Architecto quasi vel repellendus tenetur
+        nobis veritatis a ex id alias corrupti magni harum obcaecati dignissimos
+        dolorum eum asperiores maxime adipisci reprehenderit voluptatum ipsa,
+        earum deleniti suscipit dolores. Autem explicabo commodi, ducimus ab
+        animi nesciunt temporibus saepe velit!
+      </p>
+    </section>
 
-<section class="gallery stroll">
-        <h3 class="painting--title">Stroll</h3>
-        <div class="painting--container">
-    <img src="images/stroll.jpg" alt="stroll by the forest" class="painting">
-</div>
-    <p class="painting--blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet laboriosam quas cumque, id vel reprehenderit eveniet non obcaecati quam optio, adipisci error repudiandae quia nisi ea facere quidem odio repellendus!</p>
-</section>
-
-<section class="gallery bridge">
-        <h3 class="painting--title">bridge</h3>
-        <div class="painting--container">
-            <img src="images/bridge.jpg" alt="" class="painting">
+    <!-- <h1>CSS Grid Gallery</h1> -->
+    <!-- Gallery section -->
+    <div class="grid-container">
+      <!-- each gallery item begins here... -->
+      <div class="gallery-container portrait">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/bridge.jpg" alt="bridge" />
+          </div>
+          <div class="text">Bridge</div>
         </div>
-        <p class="painting--blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque qui natus dicta minus dolor magni pariatur quis. Nisi minus facilis quam minima sed vel magni odit! Nulla quasi quibusdam voluptatibus.</p>
-</section>
+      </div>
+      <!-- ...and ends here-->
+      <div class="gallery-container square">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/coot.jpg" alt="Moorhen" />
+          </div>
+          <div class="text">Moorhen</div>
+        </div>
+      </div>
 
-<section class="gallery coot">
-    <h3 class="painting--title">coot</h3>
-    <div class="painting--container">
-    <img src="images/coot.jpg" alt="" class="painting">
+      <div class="gallery-container landscape">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/jaguar.jpg" alt="jaguar" />
+          </div>
+          <div class="text">Out of the Shadows</div>
+        </div>
+      </div>
+
+      <div class="gallery-container portrait">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/stroll.jpg" alt="stroll" />
+          </div>
+          <div class="text">Stroll</div>
+        </div>
+      </div>
+
+      <div class="gallery-container landscape">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/vineyard.jpg" alt="vineyard" />
+          </div>
+          <div class="text">Vineyard</div>
+        </div>
+      </div>
+
+      <div class="gallery-container portrait">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/woods.jpg" alt="woodland" />
+          </div>
+          <div class="text">Woodland Glen</div>
+        </div>
+      </div>
+
+      <div class="gallery-container landscape">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/coot.jpg" alt="coot" />
+          </div>
+          <div class="text">Coot</div>
+        </div>
+      </div>
+
+      <div class="gallery-container landscape">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/jaguar.jpg" alt="jaguar" />
+          </div>
+          <div class="text">Jaguar</div>
+        </div>
+      </div>
+
+      <div class="gallery-container portrait">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/stroll.jpg" alt="stroll" />
+          </div>
+          <div class="text">Wander</div>
+        </div>
+      </div>
+
+      <div class="gallery-container landscape">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/vineyard.jpg" alt="beautiful" />
+          </div>
+          <div class="text">beautiful</div>
+        </div>
+      </div>
+
+      <div class="gallery-container portrait">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/woods.jpg" alt="coral" />
+          </div>
+          <div class="text">coral</div>
+        </div>
+      </div>
+
+      <div class="gallery-container square-medium">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/jaguarbw.jpg" alt="camera" />
+          </div>
+          <div class="text">camera</div>
+        </div>
+      </div>
+
+      <div class="gallery-container square-small">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/strollbw.jpg" alt="beach" />
+          </div>
+          <div class="text">beach</div>
+        </div>
+      </div>
+
+      <div class="gallery-container square-small">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/vineyardbw.jpg" alt="dinosaur" />
+          </div>
+          <div class="text">dinosaur</div>
+        </div>
+      </div>
+
+      <div class="gallery-container square-small">
+        <div class="gallery-item">
+          <div class="image">
+            <img src="../images/vineyardbw.jpg" alt="dinosaur" />
+          </div>
+          <div class="text">dinosaur</div>
+        </div>
+      </div>
+      <!-- end of gallery -->
     </div>
-    <p class="painting--blurb">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque qui natus dicta minus dolor magni pariatur quis. Nisi minus facilis quam minima sed vel magni odit! Nulla quasi quibusdam voluptatibus.</p>
-</section>
-    
-</body>
+  </body>
 </html>
