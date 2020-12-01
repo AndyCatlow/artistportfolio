@@ -3,188 +3,572 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid Gallery</title>
-    <link rel="stylesheet" href="gallery3.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
-      rel="stylesheet"
-    />
+    <title>David Catlow Art</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f8c277b1ce.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <a href="#enquiry"
+      ><button class="enquire">
+        <i class="far fa-envelope"></i><br />Enquire
+      </button></a
+    >
     <!-- hero section -->
-
     <header class="hero">
-      <h1 class="hero--title">
+      <h1 class="hero__title">
         <span id="david">David</span><br /><span id="catlow">Catlow</span>
       </h1>
     </header>
+    <!-- intro section -->
+    <section class="intro">
+      <div class="intro__text">
+        <img
+          src="BackgroundImages/david_profile_small.jpg"
+          alt="David Catlow"
+          id="intro__picture"
+        />
 
-    <!-- Bio section -->
-
-    <section class="bio">
-      <div>
-        <h2 id="bio--title">All about me</h2>
-        <img src="./images/david_profile_small.jpg" id="bio--pic" />
+        <p>
+          Thank you for visiting my online gallery. I hope that you like the
+          artwork on show. <br />
+          I am a self-taught artist living in South Derbyshire. I like to paint
+          landscapes, birds and animals, particularly when I can paint a bird or
+          animal in its natural setting. I work in several media: acrylics,
+          watercolours, pen and ink, pencil, sometimes oils. I love the
+          versatility of acrylics and much of my work is now done in this
+          medium.
+          <br />
+          The inspiration for my paintings comes from observing the natural
+          world around me, when I'm cycling, walking and birdwatching, combining
+          sketches and photographs to produce the final paintings.
+          <br />
+          <br />
+          Many of the works shown are for sale. Please contact me using the form
+          on this site if you are interested in purchasing anything.
+          <br />
+          <br />
+          NB All measurements given are approximate and do not include any
+          frames.
+        </p>
       </div>
-      <p id="bio--blurb">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-        officiis totam consectetur sed minus voluptatum esse delectus rem culpa
-        voluptas molestiae aspernatur odit praesentium explicabo similique at
-        error, reprehenderit repudiandae commodi incidunt illo nobis! Officiis,
-        et dolor! Cupiditate, repellendus aliquam veniam, asperiores a
-        perspiciatis tenetur maiores reiciendis dolorum, numquam accusantium
-        voluptas minus velit itaque sit tempora quibusdam esse voluptates
-        tempore labore laudantium? Architecto quasi vel repellendus tenetur
-        nobis veritatis a ex id alias corrupti magni harum obcaecati dignissimos
-        dolorum eum asperiores maxime adipisci reprehenderit voluptatum ipsa,
-        earum deleniti suscipit dolores. Autem explicabo commodi, ducimus ab
-        animi nesciunt temporibus saepe velit!
-      </p>
     </section>
 
-    <!-- <h1>CSS Grid Gallery</h1> -->
-    <!-- Gallery section -->
-    <div class="grid-container">
-      <!-- each gallery item begins here... -->
-      <div class="gallery-container portrait">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/bridge.jpg" alt="bridge" />
+    <!-- gallery section -->
+    <section class="gallery">
+      <!-- first gallery item -->
+      <div class="gallery__item__container portrait">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Pembrokeshire_Peregrines.jpg" alt="" />
           </div>
-          <div class="text">Bridge</div>
-        </div>
-      </div>
-      <!-- ...and ends here-->
-      <div class="gallery-container square">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/coot.jpg" alt="Moorhen" />
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Pair of Pembrokeshire Peregrines</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 70 x 40 cm<br />
+                Acrylic on primed hardboard panel
+              </p>
+            </div>
           </div>
-          <div class="text">Moorhen</div>
-        </div>
-      </div>
-
-      <div class="gallery-container landscape">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/jaguar.jpg" alt="jaguar" />
-          </div>
-          <div class="text">Out of the Shadows</div>
         </div>
       </div>
 
-      <div class="gallery-container portrait">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/stroll.jpg" alt="stroll" />
+      <div class="gallery__item__container landscape">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/African_Fish_Eagle.jpg" alt="" />
           </div>
-          <div class="text">Stroll</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>African Fish Eagle<br />(Rift Valley, Kenya)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size : 65 x 40 cm <br />
+                Acrylic on primed hardboard panel
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container landscape">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/vineyard.jpg" alt="vineyard" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/After_the_Storm.jpg" alt="" />
           </div>
-          <div class="text">Vineyard</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>After the Storm<br />(Llanrwst, Wales)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 40 x 30 cm<br />
+                Acrylic on canvas panel
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container portrait">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/woods.jpg" alt="woodland" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Cliffs_Cader_Idris.jpg" alt="" />
           </div>
-          <div class="text">Woodland Glen</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Cliffs near Cader Idris<br />(Wales)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 50 x 40 cm <br />
+                Acrylic on canvas panel
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container landscape">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/coot.jpg" alt="coot" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Cottages_at_Rainow_Low.jpg" alt="" />
           </div>
-          <div class="text">Coot</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Cottages at Rainow Low<br />(Cheshire)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 49 x 30 cm<br />
+                Acrylic on canvas panel
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container landscape">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/jaguar.jpg" alt="jaguar" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Freedom.jpg" alt="" />
           </div>
-          <div class="text">Jaguar</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Freedom<br />(Sound of Mull, Scotland)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 45 x 35 cm <br />
+                Acrylic on canvas
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container portrait">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/stroll.jpg" alt="stroll" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Great_Northern_Divers.jpg" alt="" />
           </div>
-          <div class="text">Wander</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>
+                Great Northern Divers <br />
+                (Lochindorb, Cairngorm, Scotland)
+              </h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 40 x 30 cm <br />
+                Acrylic on paper
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container landscape">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/vineyard.jpg" alt="beautiful" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Hough_Hole.jpg" alt="" />
           </div>
-          <div class="text">beautiful</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Hough Hole<br />(Rainow, Cheshire)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 32 x 23 cm <br />
+                Graphite pencil on paper
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container portrait">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/woods.jpg" alt="coral" />
+      <div class="gallery__item__container landscape">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/In_Retirement.jpg" alt="" />
           </div>
-          <div class="text">coral</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>In Retirement<br />(Isle of Mull, Scotland)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 49 x 34 cm <br />
+                Watercolour on paper
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container square-medium">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/jaguarbw.jpg" alt="camera" />
+      <div class="gallery__item__container portrait">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Lakeland_Post.jpg" alt="" />
           </div>
-          <div class="text">camera</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Lakeland Post</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 32 x 22 cm <br />
+                Watercolour on paper
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container square-small">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/strollbw.jpg" alt="beach" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Morning_Flight.jpg" alt="" />
           </div>
-          <div class="text">beach</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>
+                Morning Flight<br />
+                (Barnacle Geese)
+              </h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 52 x 41 cm <br />
+                Acrylic on primed hardboard panel
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container square-small">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/vineyardbw.jpg" alt="dinosaur" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Out_Shadows.jpg" alt="" />
           </div>
-          <div class="text">dinosaur</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Out of the Shadows<br />(Pantanal, Brazil)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 50 x 40 cm <br />
+                Acrylic on canvas panel
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="gallery-container square-small">
-        <div class="gallery-item">
-          <div class="image">
-            <img src="./images/vineyardbw.jpg" alt="dinosaur" />
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/The_Referee.jpg" alt="" />
           </div>
-          <div class="text">dinosaur</div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>
+                The Referee<br />
+                (Goldfinches)
+              </h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 48 x 39 cm <br />
+                Acrylic on watercolour paper
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- end of gallery -->
-    </div>
+
+      <div class="gallery__item__container portrait">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="Paintings/Winter_Feeding.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Winter Feeding<br />(Kerridge, Cheshire)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 64 x 44 cm <br />
+                Watercolour on paper
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item__container landscape">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/moorhen.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>The Secret World of the Moorhen</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 54 x 40 cm <br />
+                Acrylic on primed hardboard panel
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item__container landscape">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/waverockL.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Church Rock<br />(Pembrokeshire)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 50 x 40 cm <br />
+                Acrylic on canvas panel
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item__container square">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/lighthouseSq.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Ornsay Lighthouse<br />(from Isle of Skye, Scotland)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 57 x 47 cm <br />
+                Watercolour on paper
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item__container landscape">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/vineyard.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Vineyard<br />(Stellenbosch, South Africa)</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>
+                Size: 45 x 35 cm <br />
+                Acrylic on canvas
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- filler -->
+      <div class="gallery__item__container filler">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/Filler images/marshSqbw.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Marsh</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>The actual image is in color</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item__container filler">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/Filler images/woodsbw.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>Woodland</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>The actual image is in colour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item__container filler">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/Filler images/vineyardbw.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>South African Vineyard</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>The actual painting is in colour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item__container filler">
+        <div class="gallery__item">
+          <div class="gallery__item__image">
+            <img src="./Paintings/Filler images/moorhenbw.jpg" alt="" />
+          </div>
+          <div class="gallery__item__text">
+            <div class="gallery__item__title">
+              <h3>The Secret World of the Moorhen</h3>
+            </div>
+            <div class="gallery__item__description">
+              <p>The actual image is in colour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of filler -->
+    </section>
+    <!-- Sticky contact button?? -->
+    <!-- form -->
+    <footer>
+      <div id="enquiry">
+        <h3 class="enquiry__text">Contact Me</h3>
+        <p>To enquire about any of my paintings please use this form:</p>
+      </div>
+      <form name="enquiry" method="POST" data-netlify="true">
+        <div class="form--left">
+          <div class="field">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="email"
+              >Please provide an e-mail address for me to reach you at:</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="paintingName"
+              >Which painting(s) are you interested in?</label
+            >
+            <input
+              type="text"
+              name="paintingName"
+              id="paintingName"
+              placeholder="Painting Title"
+            />
+          </div>
+          <div class="field">
+            <label for="phone"
+              >If you'd like me to call you please provide your number
+              here:</label
+            >
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number (optional)"
+            />
+          </div>
+        </div>
+
+        <div class="form--right">
+          <div class="field">
+            <label for="message"
+              >Please provide any extra information or ask any questions here.
+              I'll get in touch as soon as I can.</label
+            >
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Message"
+              minlength="20ch"
+              required
+            ></textarea>
+          </div>
+          <div class="field">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+
+          <div>
+            <button type="submit" value="Send Message" class="button primary">
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </footer>
   </body>
 </html>
