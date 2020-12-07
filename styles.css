@@ -25,7 +25,7 @@
 }
 
 body {
-  background-color: black;
+  background-color: rgb(58, 58, 58);
   font-family: "Courgette", sans-serif;
   color: var(--clr-white);
 }
@@ -83,11 +83,11 @@ body {
 /*? *********** */
 
 .intro {
-  margin-top: 2vw;
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
     url("backgroundimages/studio_small.jpg");
+
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,11 +116,31 @@ body {
   background-color: var(--bg-overlay--light);
   border-radius: var(--corner);
   box-shadow: var(--boxShadow1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 @media screen and (min-width: 650px) {
   .intro {
     background-attachment: fixed;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro__text {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    max-width: 90%;
+    /* margin: auto auto; */
+    justify-items: center;
+    font-size: clamp(1.1rem, 4vmin, 1.4rem);
+  }
+
+  .intro__text p {
+    max-width: 60ch;
+    margin-left: 5em;
   }
 }
 
@@ -137,9 +157,8 @@ body {
 }
 
 .gallery__item__container {
-  background-color: rgb(58, 58, 58);
   border-radius: var(--corner);
-  overflow: hidden;
+
   margin: 1vw auto;
   border: none;
   width: 98vw;
@@ -181,7 +200,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: max-content;
+  max-width: max-content;
 }
 
 @media screen and (min-width: 800px) {
@@ -223,6 +242,7 @@ footer {
   padding: 1rem 2rem;
   text-align: center;
   color: var(--clr-white);
+  backdrop-filter: blur(5px);
 }
 
 .enquiry__text {
@@ -245,6 +265,8 @@ form {
   gap: 2vw;
   margin: 2vw;
   padding: 0 2rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .field {
   width: 100%;
