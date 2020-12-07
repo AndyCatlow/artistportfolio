@@ -30,19 +30,6 @@ body {
   color: var(--clr-white);
 }
 
-.enquire {
-  position: fixed;
-  transform: translate(calc(97vw - 100%), 80vh);
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: rgb(95, 95, 95);
-  border-radius: 500px;
-  padding: 1em;
-}
-.enquire i {
-  font-size: 2rem;
-}
-
 /** ****** */
 /** header */
 /** ****** */
@@ -100,7 +87,7 @@ body {
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-    url("Backgroundimages/studio_small.jpg");
+    url("backgroundimages/studio_small.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -249,9 +236,9 @@ form {
   width: 90vw;
   max-width: 1000px;
   color: var(--clr-white);
-  font-size: 1rem;
-  background: var(--bg-overlay--dark);
-  box-shadow: var(--boxShadow2);
+  font-size: 1.1rem;
+  background: var(--bg-overlay--light);
+  box-shadow: var(--boxShadow1);
   border-radius: var(--corner);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -281,9 +268,9 @@ textarea,
 label {
   background: none;
   font-family: inherit;
+  font-size: inherit;
   display: inline-block;
   width: 100%;
-  border: none;
 }
 
 label {
@@ -292,16 +279,18 @@ label {
 
 input,
 textarea {
+  border: solid 2px rgba(240, 154, 25, 0);
   border-bottom: solid 2px;
   color: var(--clr-orange);
-  padding: 0.5em 0;
+  padding: 0.5em 0.5em;
+  margin-bottom: 1em;
 }
 
 input:focus,
 textarea:focus {
   border: solid 2px;
-  padding-left: 1em;
-  font-size: 1.1rem;
+  border-radius: var(--corner);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 textarea {
@@ -323,4 +312,19 @@ button:focus {
   background-color: var(--clr-orange);
   color: var(--clr-white);
   transition: all 500ms ease-in-out;
+}
+
+/* Sticky enquiry button */
+
+.enquire {
+  position: fixed;
+  transform: translate(calc(97vw - 100%), 80vh);
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgb(95, 95, 95);
+  border-radius: 500px;
+  padding: 1em;
+}
+.enquire i {
+  font-size: 2rem;
 }
