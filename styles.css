@@ -9,11 +9,12 @@
   --text-clamp-small: clamp(1rem, 3vmin, 2rem);
   --text-clamp-medium: clamp(1rem, 4vmin, 4rem);
   --text-clamp-large: clamp(1rem, 5vmax, 9vmax);
-  --corner: 5px;
+  --corner: 10px;
 }
 
 /* fonts */
 /* font-family: 'Arizonia', cursive; */
+/* font-family: "Courgette", sans-serif; */
 
 /* basic reset */
 *,
@@ -30,6 +31,106 @@ body {
   color: var(--clr-white);
 }
 
+/* global button styling */
+
+button {
+  padding: 0.25em 1em;
+  font-size: clamp(1rem, 3vw, 2rem);
+  background-color: whitesmoke;
+  color: black;
+  margin: 2vw auto;
+  border-radius: var(--corner);
+  border: none;
+  font-family: inherit;
+  transition: all 500ms ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--clr-orange);
+  color: whitesmoke;
+  transition: all 500ms ease-in-out;
+}
+
+/* ********** */
+/* Sticky nav */
+/* ********** */
+
+.nav-toggle {
+  position: fixed;
+  top: -990px;
+}
+
+.nav-toggle-label {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  margin: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: all 400ms ease-in-out;
+}
+
+#hamburger--close {
+  display: none;
+}
+
+.nav-toggle-label:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 400ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1);
+  transition: all 400ms ease-in-out;
+  transform-origin: right;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label > #hamburger {
+  display: none;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label > #hamburger--close {
+  display: block;
+  padding: 0 0.1em;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transform: scale(0);
+  transition: transform 400ms ease-in-out;
+  transform-origin: right;
+}
+
+.nav--btn {
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 500px;
+  width: 10ch;
+  height: 10ch;
+  padding: 1em;
+  margin-top: 0;
+  margin-right: 0.5em;
+  font-size: var(--text-clamp-small);
+  cursor: pointer;
+}
+.nav--btn i {
+  font-size: 2rem;
+}
+
 /** ****** */
 /** header */
 /** ****** */
@@ -43,13 +144,14 @@ body {
       rgba(0, 0, 0, 0.4) 30%,
       rgba(0, 0, 0, 0.9) 60%
     ),
-    url("BackgroundImages/jaguarlefthead2.jpg");
+    url("./Images/BackgroundImages/jaguarlefthead2.jpg");
   background-position: bottom left;
   background-size: cover;
   display: flex;
   justify-content: flex-end;
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 @media screen and (min-width: 2400px) {
@@ -59,7 +161,7 @@ body {
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 0.95) 60%
       ),
-      url("BackgroundImages/jaguarleftBig.jpg");
+      url("./Images/BackgroundImages/jaguarleftBig.jpg");
   }
 }
 
@@ -86,7 +188,7 @@ body {
   min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-    url("backgroundimages/studio_small.jpg");
+    url("./Images/backgroundimages/studio_small.jpg");
 
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -94,6 +196,9 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
 }
 
 #intro__picture {
@@ -133,14 +238,18 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     max-width: 90%;
-    /* margin: auto auto; */
     justify-items: center;
+    align-items: center;
     font-size: clamp(1.1rem, 4vmin, 1.4rem);
   }
 
   .intro__text p {
     max-width: 60ch;
     margin-left: 5em;
+  }
+
+  #intro__picture {
+    clip-path: none;
   }
 }
 
@@ -223,7 +332,7 @@ footer {
   width: 100%;
   min-height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./BackgroundImages/bridge.jpg");
+    url("./Images/Sketches/Landscapes/3_Shires_Head.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -231,13 +340,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 
 #enquiry {
   max-width: 90vw;
   margin: 5vw auto;
-  background-color: var(--bg-overlay--light);
-  box-shadow: var(--boxShadow1);
+  background-color: var(--bg-overlay--dark);
+  box-shadow: var(--boxShadow2);
   border-radius: var(--corner);
   padding: 1rem 2rem;
   text-align: center;
@@ -257,8 +367,8 @@ form {
   max-width: 1000px;
   color: var(--clr-white);
   font-size: 1.1rem;
-  background: var(--bg-overlay--light);
-  box-shadow: var(--boxShadow1);
+  background: var(--bg-overlay--dark);
+  box-shadow: var(--boxShadow2);
   border-radius: var(--corner);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -317,36 +427,4 @@ textarea:focus {
 
 textarea {
   resize: vertical;
-}
-
-button {
-  padding: 0.25em 1em;
-  font-size: clamp(1rem, 3vw, 2rem);
-  background-color: rgb(204, 199, 199);
-  margin: 2vw auto;
-  border-radius: var(--corner);
-  border: none;
-  font-family: inherit;
-}
-
-button:hover,
-button:focus {
-  background-color: var(--clr-orange);
-  color: var(--clr-white);
-  transition: all 500ms ease-in-out;
-}
-
-/* Sticky enquiry button */
-
-.enquire {
-  position: fixed;
-  transform: translate(calc(97vw - 100%), 80vh);
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: rgb(95, 95, 95);
-  border-radius: 500px;
-  padding: 1em;
-}
-.enquire i {
-  font-size: 2rem;
 }

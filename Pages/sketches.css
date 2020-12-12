@@ -1,0 +1,41 @@
+.title {
+  margin: 1em auto;
+  padding: 2em;
+  text-align: center;
+  background: var(--bg-overlay--light);
+  box-shadow: var(--boxShadow1);
+  width: max-content;
+}
+
+.sketch__container {
+  margin: 2vw;
+}
+
+.sketch {
+  object-fit: contain;
+  height: min-content;
+  margin-bottom: 2vw;
+}
+
+.sketch img {
+  max-width: 100%;
+  display: block;
+}
+
+@media screen and (min-width: 450px) {
+  .sketch__container {
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .sketch__container {
+    column-count: 3;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .sketch__container {
+    column-count: 4;
+  }
+}
