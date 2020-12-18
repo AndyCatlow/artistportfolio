@@ -20,4 +20,7 @@ previews.forEach((preview) => {
 modal.addEventListener("click", () => {
   modal.classList.remove("open");
   original.classList.remove("open");
+  original.src = "";
+  original.alt = "";
+  caption.textContent = "";
 });
