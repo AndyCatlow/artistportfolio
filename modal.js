@@ -13,7 +13,7 @@ previews.forEach((preview) => {
     const altText = preview.alt;
     original.alt = altText;
     // Dynamic title
-    caption.textContent = altText;
+    // caption.textContent = altText;
   });
 });
 
@@ -22,5 +22,5 @@ modal.addEventListener("click", () => {
   original.classList.remove("open");
   original.src = "";
   original.alt = "";
-  caption.textContent = "";
+  // caption.textContent = "";
 });
